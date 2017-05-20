@@ -26,7 +26,7 @@
 
 
 int uriparse(const char *src, struct URI *uri) {
-	int errno = EXIT_SUCCESS;
+    int errno = EXIT_SUCCESS;
     int i = 0, state = 0, offset = 0, length = 0, ipv6 = 0;
     char cur = src[0];
     uri->scheme = uri->buf;
@@ -41,23 +41,23 @@ int uriparse(const char *src, struct URI *uri) {
                 }
                 break;
             case 1:
-				if (1 == length) {
-					if ('?' == cur) {
-						state = 6;
-						continue;
-					} else if ('#' == cur) {
-						state = 7;
-						continue;
-					} else if ('/' != cur) {
-						errno = EXIT_FAILURE;
-					}
-				} else if (2 == length) {
-					if ('/' != cur) {
-						uri->path = &uri->buf[i + offset - 1];
-						state = 6;
-						continue;
-					}
-				} else if (3 == length) {
+                if (1 == length) {
+                    if ('?' == cur) {
+                        state = 6;
+                        continue;
+                    } else if ('#' == cur) {
+                        state = 7;
+                        continue;
+                    } else if ('/' != cur) {
+                        errno = EXIT_FAILURE;
+                    }
+                } else if (2 == length) {
+                    if ('/' != cur) {
+                        uri->path = &uri->buf[i + offset - 1];
+                        state = 6;
+                        continue;
+                    }
+                } else if (3 == length) {
                     if ('/' == cur) {
                         length = 0;
                         state = 5;
