@@ -3,6 +3,7 @@ URI parsing implementation in C. parse URI fields like urlparse.urlparse in Pyth
 
 ### usage ###
 	#include <assert.h>
+	#include <string.h>
 	#include "uriparse.h"
 	
 	int main(int argc, const char *argv[]) {
