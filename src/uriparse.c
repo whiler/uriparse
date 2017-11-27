@@ -26,11 +26,11 @@
 
 
 int uriparse(const char *src, struct URI *uri) {
-    int errno = EXIT_SUCCESS;
+    int rc = EXIT_SUCCESS;
     int i = 0, state = 0, offset = 0, length = 0, ipv6 = 0;
     char cur = src[0];
     uri->scheme = uri->buf;
-    while (i + offset < URI_MAX + 1 && cur && !errno) {
+    while (i + offset < URI_MAX + 1 && cur && !rc) {
         length += 1;
         switch (state) {
             case 0:
@@ -49,7 +49,7 @@ int uriparse(const char *src, struct URI *uri) {
                         state = 7;
                         continue;
                     } else if ('/' != cur) {
-                        errno = EXIT_FAILURE;
+                        rc = EXIT_FAILURE;
                     }
                 } else if (2 == length) {
                     if ('/' != cur) {
@@ -185,5 +185,5 @@ int uriparse(const char *src, struct URI *uri) {
             uri->passwd = NULL;
         }
     }
-    return errno;
+    return rc;
 }
