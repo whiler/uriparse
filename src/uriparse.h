@@ -7,7 +7,7 @@
  *     parse uri fields
  *
  * public functions:
- *     int uriparse(const char *src, struct URI *uri)
+ *     int uriparse(const char *src, struct uri *uri)
  *
  * notes:
  *     syntax
@@ -25,7 +25,7 @@
 
 #define URI_MAX 2083
 
-struct URI {
+struct uri {
     char *scheme;
     char *user;
     char *passwd;
@@ -37,6 +37,6 @@ struct URI {
     char buf[URI_MAX + 1 + 1];
 };
 
-int uriparse(const char *src, struct URI *uri);
+int uriparse(const char *src, struct uri *uri);
 
 #endif

@@ -7,7 +7,7 @@
  *     parse uri fields
  *
  * public functions:
- *     int uriparse(const char *src, struct URI *uri)
+ *     int uriparse(const char *src, struct uri *uri)
  *
  * notes:
  *     syntax
@@ -25,7 +25,7 @@
 #include "uriparse.h"
 
 
-int uriparse(const char *src, struct URI *uri) {
+int uriparse(const char *src, struct uri *uri) {
     int rc = EXIT_SUCCESS;
     int i = 0, state = 0, offset = 0, length = 0, ipv6 = 0;
     char cur = src[0];

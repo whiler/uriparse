@@ -7,11 +7,11 @@
 
 
 int main(int argc, const char *argv[]) {
-    struct URI uri = {0};
+    struct uri uri = {0};
     int rc = 0;
 
     printf("case 1\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -24,7 +24,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 2\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -37,7 +37,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 3\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -50,7 +50,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 4\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -63,7 +63,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 5\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -76,7 +76,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 6\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -89,7 +89,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 7\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -102,7 +102,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 8\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -115,7 +115,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 9\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -128,7 +128,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 10\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -141,7 +141,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 11\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -154,7 +154,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 12\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -167,7 +167,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 13\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -180,7 +180,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 14\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -193,7 +193,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 15\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -206,7 +206,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 16\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -219,7 +219,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 17\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -232,7 +232,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 18\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -245,7 +245,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 19\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -258,7 +258,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 20\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -271,7 +271,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 21\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -284,7 +284,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 22\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -297,7 +297,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 23\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -310,7 +310,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 24\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -323,7 +323,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 25\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -336,7 +336,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 26\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -349,7 +349,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 27\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -362,7 +362,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 28\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -375,7 +375,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 29\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -388,7 +388,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 30\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -401,7 +401,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 31\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -414,7 +414,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 32\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@127.0.0.1", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -427,7 +427,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 33\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -440,7 +440,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 34\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -453,7 +453,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 35\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -466,7 +466,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 36\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -479,7 +479,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 37\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -492,7 +492,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 38\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -505,7 +505,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 39\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -518,7 +518,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 40\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -531,7 +531,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 41\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -544,7 +544,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 42\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -557,7 +557,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 43\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -570,7 +570,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 44\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -583,7 +583,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 45\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -596,7 +596,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 46\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -609,7 +609,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 47\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -622,7 +622,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 48\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root:e4D8F6z3f2b1@[::1]", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -635,7 +635,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 49\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -648,7 +648,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 50\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -661,7 +661,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 51\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -674,7 +674,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 52\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -687,7 +687,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 53\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -700,7 +700,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 54\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -713,7 +713,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 55\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -726,7 +726,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 56\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -739,7 +739,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 57\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -752,7 +752,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 58\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -765,7 +765,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 59\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -778,7 +778,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 60\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -791,7 +791,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 61\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -804,7 +804,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 62\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -817,7 +817,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 63\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -830,7 +830,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 64\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@localhost", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -843,7 +843,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 65\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -856,7 +856,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 66\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -869,7 +869,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 67\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -882,7 +882,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 68\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -895,7 +895,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 69\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -908,7 +908,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 70\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -921,7 +921,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 71\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -934,7 +934,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 72\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -947,7 +947,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 73\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -960,7 +960,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 74\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -973,7 +973,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 75\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -986,7 +986,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 76\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -999,7 +999,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 77\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1012,7 +1012,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 78\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1025,7 +1025,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 79\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1038,7 +1038,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 80\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@127.0.0.1", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1051,7 +1051,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 81\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1064,7 +1064,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 82\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1077,7 +1077,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 83\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1090,7 +1090,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 84\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1103,7 +1103,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 85\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1116,7 +1116,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 86\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1129,7 +1129,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 87\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1142,7 +1142,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 88\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1155,7 +1155,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 89\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1168,7 +1168,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 90\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1181,7 +1181,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 91\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1194,7 +1194,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 92\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1207,7 +1207,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 93\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1220,7 +1220,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 94\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1233,7 +1233,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 95\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1246,7 +1246,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 96\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://root@[::1]", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1259,7 +1259,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 97\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1272,7 +1272,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 98\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1285,7 +1285,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 99\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1298,7 +1298,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 100\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1311,7 +1311,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 101\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1324,7 +1324,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 102\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1337,7 +1337,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 103\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1350,7 +1350,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 104\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1363,7 +1363,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 105\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1376,7 +1376,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 106\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1389,7 +1389,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 107\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1402,7 +1402,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 108\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1415,7 +1415,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 109\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1428,7 +1428,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 110\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1441,7 +1441,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 111\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1454,7 +1454,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 112\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://localhost", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1467,7 +1467,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 113\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1480,7 +1480,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 114\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1493,7 +1493,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 115\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1506,7 +1506,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 116\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1519,7 +1519,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 117\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1532,7 +1532,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 118\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1545,7 +1545,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 119\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1558,7 +1558,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 120\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1571,7 +1571,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 121\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1584,7 +1584,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 122\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1597,7 +1597,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 123\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1610,7 +1610,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 124\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1623,7 +1623,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 125\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1636,7 +1636,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 126\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1649,7 +1649,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 127\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1662,7 +1662,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 128\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://127.0.0.1", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1675,7 +1675,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 129\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1688,7 +1688,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 130\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1701,7 +1701,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 131\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1714,7 +1714,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 132\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1727,7 +1727,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 133\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1740,7 +1740,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 134\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1753,7 +1753,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 135\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1766,7 +1766,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 136\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]:3306", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1779,7 +1779,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 137\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1792,7 +1792,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 138\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1805,7 +1805,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 139\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1818,7 +1818,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 140\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1831,7 +1831,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 141\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1844,7 +1844,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 142\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1857,7 +1857,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 143\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1870,7 +1870,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 144\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql://[::1]", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1883,7 +1883,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 145\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("unix:///var/run/docker.sock", &uri);
     assert(0 == rc);
     assert(0 == strcmp("unix", uri.scheme));
@@ -1896,7 +1896,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 146\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:/account?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1909,7 +1909,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 147\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:/account?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1922,7 +1922,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 148\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:/account#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1935,7 +1935,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 149\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:/account", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1948,7 +1948,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 150\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:?charset=utf8mb4#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1961,7 +1961,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 151\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:?charset=utf8mb4", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1974,7 +1974,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 152\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:#debug", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -1987,7 +1987,7 @@ int main(int argc, const char *argv[]) {
     assert(0 == strcmp("debug", uri.fragment));
 
     printf("case 153\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:", &uri);
     assert(0 == rc);
     assert(0 == strcmp("mysql", uri.scheme));
@@ -2000,7 +2000,7 @@ int main(int argc, const char *argv[]) {
     assert(NULL == uri.fragment);
 
     printf("case 154\n");
-    bzero(&uri, sizeof(struct URI));
+    bzero(&uri, sizeof(struct uri));
     rc = uriparse("mysql:root:e4D8F6z3f2b1@localhost:3306/account?charset=utf8mb4#debug", &uri);
     assert(EXIT_FAILURE == rc);
     assert(0 == strcmp("mysql", uri.scheme));
