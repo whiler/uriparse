@@ -7,7 +7,7 @@ URI parsing implementation in C. parse URI fields like urlparse.urlparse in Pyth
 	#include "uriparse.h"
 	
 	int main(int argc, const char *argv[]) {
-		struct URI uri = {0};
+		struct uri uri = {0};
 		int rc = 0;
 	
 		rc = uriparse("mysql://root:e4D8F6z3f2b1@localhost:3306/account?charset=utf8mb4#debug", &uri);
