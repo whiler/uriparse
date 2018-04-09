@@ -29,7 +29,7 @@ URI parsing implementation in C. parse URI fields like urlparse.urlparse in Pyth
 *scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]*
 
 ### tests ###
-see [test.c](src/test.c) .
+see [test.c](src/test.c) [![Build Status](https://travis-ci.org/whiler/uriparse.svg?branch=master)](https://travis-ci.org/whiler/uriparse) .
 
 ### license ###
 This project is licensed under the MIT License.
