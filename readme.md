@@ -1,4 +1,7 @@
 ## uriparse ##
+
+[![Build Status](https://travis-ci.org/whiler/uriparse.svg?branch=master)](https://travis-ci.org/whiler/uriparse)
+
 URI parsing implementation in C. parse URI fields like urlparse.urlparse in Python.
 
 ### usage ###
@@ -29,7 +32,7 @@ URI parsing implementation in C. parse URI fields like urlparse.urlparse in Pyth
 *scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]*
 
 ### tests ###
-see [test.c](src/test.c) [![Build Status](https://travis-ci.org/whiler/uriparse.svg?branch=master)](https://travis-ci.org/whiler/uriparse) .
+see [test.c](src/test.c) .
 
 ### license ###
 This project is licensed under the MIT License.
