@@ -1,6 +1,6 @@
 ## uriparse ##
 
-[![Build Status](https://travis-ci.org/whiler/uriparse.svg?branch=master)](https://travis-ci.org/whiler/uriparse)
+[![Build Status](https://travis-ci.org/whiler/uriparse.svg?branch=master)](https://travis-ci.org/whiler/uriparse) [![Coverage Status](https://coveralls.io/repos/github/whiler/uriparse/badge.svg?branch=master)](https://coveralls.io/github/whiler/uriparse?branch=master)
 
 URI parsing implementation in C. parse URI fields like urlparse.urlparse in Python.
 

@@ -1,11 +1,11 @@
-CFLAGS = -Wall -g
-LINKS = 
+CFLAGS = -Wall -g -fprofile-arcs -ftest-coverage
+LINKS =
 
-TARGET = a.out
+TARGET = test
 SOURCES = $(wildcard src/*.c)
 OBJECTS = $(patsubst %.c, %.o, $(SOURCES))
 
-.PHONY: cleanall cleanobj clean
+.PHONY: clean
 
 default: $(TARGET)
 
@@ -15,10 +15,5 @@ $(OBJECTS): %.o:%.c
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) $(LINKS) $^ -o $@
 
-cleanall: cleanobj clean
-
-cleanobj:
-	rm -f $(OBJECTS)
-
 clean:
-	rm -f $(TARGET)
+	rm -f $(OBJECTS) $(TARGET)

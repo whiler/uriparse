@@ -53,3 +53,7 @@ dkms.conf
 
 # VIM swap
 *.sw[po]
+
+# gcov
+*.gcda
+*.gcno
