@@ -28,6 +28,20 @@ URI parsing implementation in C. parse URI fields like urlparse.urlparse in Pyth
 		return 0;
 	}
 
+#### command ####
+	usage uriparse -f fields [-d delimiter] url [url ...]
+	      uriparse -h
+	
+	available fields:
+	    s = scheme
+	    u = user
+	    w = password
+	    h = host
+	    p = port
+	    t = path
+	    q = query
+	    f = fragment
+
 ### syntax ###
 *scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]*
 
