@@ -10,7 +10,7 @@ before_install:
      - pip install --user cpp-coveralls
 
 script:
-    - make
+    - make test
     - ./test
 
 after_success:
