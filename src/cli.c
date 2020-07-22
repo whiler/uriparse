@@ -4,6 +4,21 @@
 
 #include "uriparse.h"
 
+int usage(const char *name) {
+	printf("usage %s -f fields [-d delimiter] url [url ...]\n", name);
+	printf("      %s -h\n\n", name);
+	printf("available fields:\n");
+	printf("    s = scheme\n");
+	printf("    u = user\n");
+	printf("    w = password\n");
+	printf("    h = host\n");
+	printf("    p = port\n");
+	printf("    t = path\n");
+	printf("    q = query\n");
+	printf("    f = fragment\n");
+	return EXIT_SUCCESS;
+}
+
 int main(int argc, char * const argv[]) {
 	char fields[9] = {0};
 	char delimiter = '\t';
@@ -97,19 +112,4 @@ int main(int argc, char * const argv[]) {
 	}
 
 	return rc;
-}
-
-int usage(const char *name) {
-	printf("usage %s -f fields [-d delimiter] url [url ...]\n", name);
-	printf("      %s -h\n\n", name);
-	printf("available fields:\n");
-	printf("    s = scheme\n");
-	printf("    u = user\n");
-	printf("    w = password\n");
-	printf("    h = host\n");
-	printf("    p = port\n");
-	printf("    t = path\n");
-	printf("    q = query\n");
-	printf("    f = fragment\n");
-	return EXIT_SUCCESS;
 }
